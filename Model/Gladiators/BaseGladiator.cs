@@ -16,7 +16,7 @@ namespace Gladiator.Model.Gladiators
         public string FullName => $"{GetType().Name} {Name}";
         public int Level { get; private set; }
 
-        public int HP => (int)(_baseHP * HPMultiplier * Level); 
+        public int HP => (int)(_baseHP * HPMultiplier * Level);
         public int SP => (int)(_baseSP * SPMultiplier * Level);
         public int DEX => (int)(_baseDEX * DEXMultiplier * Level);
         private readonly int _baseHP;
@@ -29,6 +29,19 @@ namespace Gladiator.Model.Gladiators
 
         private static string _namesPath = Environment.CurrentDirectory + @"\Names.txt";
         private static string[] _names = GetNames();
+
+        protected BaseGladiator(Multiplier hpMult, Multiplier spMult, Multiplier dexMult, int hp, int sp, int dex, int lvl)
+        {
+            HPMultiplier = hpMult.GetMultiplier();
+            SPMultiplier = spMult.GetMultiplier();
+            DEXMultiplier = dexMult.GetMultiplier();
+            _baseHP = hp;
+            _baseSP = sp;
+            _baseDEX = dex;
+            Level = lvl;
+            Health = HP;
+        }
+
 
 
         private static string[] GetNames()
