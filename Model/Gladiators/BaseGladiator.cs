@@ -11,6 +11,12 @@ namespace Gladiator.Model.Gladiators
             Medium,
             High,
         }
+        public enum CombatStatus
+        {
+            Miss,
+            Hit,
+            End,
+        }
 
         public string Name = _names[Randomizer.Get(_names.Length)];
         public string FullName => $"{GetType().Name} {Name}";
