@@ -42,7 +42,25 @@ namespace Gladiator.Model.Gladiators
             Health = HP;
         }
 
+        public void LevelUp()
+        {
+            Level++;
+        }
 
+        public void DecreaseHealthBy(int damage)
+        {
+            Health -= damage;
+        }
+
+        public void HealUp()
+        {
+            Health = HP;
+        }
+
+        public bool IsDead()
+        {
+            return Health <= 0;
+        }
 
         private static string[] GetNames()
         {
