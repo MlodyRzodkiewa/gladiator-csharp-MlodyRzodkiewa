@@ -2,5 +2,12 @@
 {
     public class BaseGladiator
     {
+        public enum Multiplier
+        {
+            Low,
+            Medium,
+            High,
+        }
+
     }
 }
