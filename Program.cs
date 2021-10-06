@@ -1,10 +1,15 @@
-﻿namespace Gladiator
+﻿using Gladiator.Controller;
+
+namespace Gladiator
 {
     public static class Program
     {
         public static void Main()
         {
-            // Start the program here
+            var colo = new Colosseum();
+            colo.GenerateGladiators(25);
+            colo.SimulateCombat();
+
         }
     }
 }
