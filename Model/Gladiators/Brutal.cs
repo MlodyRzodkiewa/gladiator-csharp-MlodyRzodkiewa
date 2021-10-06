@@ -6,4 +6,5 @@
             base(Multiplier.High, Multiplier.High, Multiplier.Low, hp, sp, dex, level)
         {
         }
+    }
 }

@@ -6,4 +6,5 @@
             base(Multiplier.Medium, Multiplier.Medium, Multiplier.Medium, hp, sp, dex, level)
         {
         }
+    }
 }
