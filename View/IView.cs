@@ -2,5 +2,7 @@
 {
     public interface IView
     {
+        void Display();
+        int GetNumberBetween();
     }
 }
